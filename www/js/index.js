@@ -50,10 +50,14 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
+		document.getElementById('btnYes').style.display = "none";
+		document.getElementById('btnNo').style.display = "none";
     }
 };
 
 function hitYes(){
+	
+	document.getElementById('btnOk').style.display = "none"; 
 	
 	document.getElementById('question').innerHTML = q[count];
 	
@@ -70,6 +74,8 @@ function hitYes(){
 }
 
 function hitNo(){
+
+	document.getElementById('btnOk').style.display = "none"; 
 
 	document.getElementById('question').innerHTML = "Don't get it!!!";
 	document.getElementById('btnYes').style.display = "none";
