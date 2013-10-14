@@ -68,6 +68,8 @@ function hitYes(){
 	
 	document.getElementById('btnOk').style.display = "none"; 
 	document.getElementById('btnReset').style.display = "none"; 
+	document.getElementById('btnYes').style.display = "block";
+	document.getElementById('btnNo').style.display = "block";
 	
 	document.getElementById('question').innerHTML = q[count];
 	
