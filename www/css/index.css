@@ -158,3 +158,6 @@ h1 {
 	position:relative;
 	top:1px;
 }
+#decider p {
+	font-size: 20px;
+}

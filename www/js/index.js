@@ -16,10 +16,8 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-var count = 1;
-var q[1] = "Is it something you absolutely need?";
-var q[2] = "Do you need it immediately?";
-var q[3] = "Will you use it regularly?";
+var count = 0;
+var q = ["Is it something you absolutely need?","Do you need it immediately?","Will you use it regularly?"];
 
 var app = {
     // Application Constructor
@@ -62,9 +60,7 @@ function hitYes(){
 	
 	count += 1;
 	
-	document.getElementById('question').innerHTML = q[count];;
-	
-	
+	document.getElementById('question').innerHTML = q[1];;
 }
 
 function hitNo(){
@@ -75,5 +71,5 @@ function hitNo(){
 	
 	count += 1;
 	
-	document.getElementById('question').innerHTML = q[count];;
+	document.getElementById('question').innerHTML = q[1];;
 }
