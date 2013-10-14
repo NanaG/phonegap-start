@@ -141,9 +141,10 @@ h1 {
 	font-size:50px;
 	font-weight:bold;
 	font-style:normal;
-	height:100px;
+	height:auto;
 	line-height:100px;
-	width:100px;
+	width:auto;
+	padding: 40px;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #ffffff;
