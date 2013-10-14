@@ -50,20 +50,31 @@ var app = {
 
         console.log('Received Event: ' + id);
 		
-		document.getElementById('btnYes').style.display = "none";
-		document.getElementById('btnNo').style.display = "none";
+		
     }
 };
+
+function hitReset(){
+	count = 0;
+	document.getElementById('btnOk').style.display = "none"; 
+	document.getElementById('btnReset').style.display = "none"; 
+
+	document.getElementById('question').innerHTML = q[count];
+	document.getElementById('btnYes').style.display = "block";
+	document.getElementById('btnNo').style.display = "block";
+}
 
 function hitYes(){
 	
 	document.getElementById('btnOk').style.display = "none"; 
+	document.getElementById('btnReset').style.display = "none"; 
 	
 	document.getElementById('question').innerHTML = q[count];
 	
 	if(count == total){
 		document.getElementById('btnYes').style.display = "none";
 		document.getElementById('btnNo').style.display = "none";
+		document.getElementById('btnReset').style.display = "block"; 
 	}
 	
 	if(count > total){
@@ -76,6 +87,7 @@ function hitYes(){
 function hitNo(){
 
 	document.getElementById('btnOk').style.display = "none"; 
+	document.getElementById('btnReset').style.display = "block"; 
 
 	document.getElementById('question').innerHTML = "Don't get it!!!";
 	document.getElementById('btnYes').style.display = "none";
