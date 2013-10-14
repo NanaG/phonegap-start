@@ -57,6 +57,11 @@ function hitYes(){
 	
 	document.getElementById('question').innerHTML = q[count];
 	
+	if(count == total){
+		document.getElementById('btnYes').style.display = "none";
+		document.getElementById('btnNo').style.display = "none";
+	}
+	
 	if(count > total){
 		return true;
 	}
@@ -65,20 +70,10 @@ function hitYes(){
 }
 
 function hitNo(){
-	
-	//if(count == 0){
-		document.getElementById('question').innerHTML = "Don't get it!!!";
-		document.getElementById('btnYes').style.display = "none";
-		document.getElementById('btnNo').style.display = "none";
-		
-		return true;
-		//}
-	
-	/*document.getElementById('question').innerHTML = q[count];
-	
-	if(count > total){
-		return truer;
-	}
-	
-	count = parseInt(count) + 1;*/
+
+	document.getElementById('question').innerHTML = "Don't get it!!!";
+	document.getElementById('btnYes').style.display = "none";
+	document.getElementById('btnNo').style.display = "none";
+
+	return true;
 }
