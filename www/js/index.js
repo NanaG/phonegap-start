@@ -17,9 +17,9 @@
  * under the License.
  */
 var count = 1;
-var q1 = "Is it something you absolutely need?";
-var q2 = "Do you need it immediately?";
-var q3 = "Will you use it regularly?";
+var q[1] = "Is it something you absolutely need?";
+var q[2] = "Do you need it immediately?";
+var q[3] = "Will you use it regularly?";
 
 var app = {
     // Application Constructor
@@ -61,9 +61,8 @@ function hitYes(){
 	}
 	
 	count += 1;
-	var newQ = q + count;
 	
-	document.getElementById('question').innerHTML = newQ;
+	document.getElementById('question').innerHTML = q[count];;
 	
 	
 }
@@ -75,7 +74,6 @@ function hitNo(){
 	}
 	
 	count += 1;
-	var newQ = q + count;
 	
-	document.getElementById('question').innerHTML = newQ;
+	document.getElementById('question').innerHTML = q[count];;
 }
