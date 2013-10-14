@@ -58,9 +58,9 @@ function hitYes(){
 		return true;
 	}
 	
-	count += 1;
+	count = parseInt(count) + 1;
 	
-	document.getElementById('question').innerHTML = q[1];;
+	document.getElementById('question').innerHTML = q[count];;
 }
 
 function hitNo(){
@@ -69,7 +69,7 @@ function hitNo(){
 		return true;
 	}
 	
-	count += 1;
+	count = parseInt(count) + 1;
 	
-	document.getElementById('question').innerHTML = q[1];;
+	document.getElementById('question').innerHTML = q[count];;
 }
