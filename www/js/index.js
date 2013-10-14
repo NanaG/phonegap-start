@@ -16,6 +16,11 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var count = 1;
+var q1 = "Is it something you absolutely need?";
+var q2 = "Do you need it immediately?";
+var q3 = "Will you use it regularly?";
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -45,5 +50,32 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		
     }
 };
+
+function hitYes(){
+	
+	if(count > 3){
+		return true;
+	}
+	
+	count += 1;
+	var newQ = q + count;
+	
+	document.getElementById('question').innerHTML = newQ;
+	
+	
+}
+
+function hitNo(){
+	
+	if(count > 3){
+		return true;
+	}
+	
+	count += 1;
+	var newQ = q + count;
+	
+	document.getElementById('question').innerHTML = newQ;
+}
